@@ -1,0 +1,12 @@
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.home , name="home"),
+    path('<int:room>/', views.room, name='room'),
+    path('checkview', views.checkview, name='checkview'),
+    path('send', views.send, name='send'),
+    path('getMessages/<int:room>/', views.getMessages, name='getMessages'),
+    path('about', views.about, name='about')
+]
+
